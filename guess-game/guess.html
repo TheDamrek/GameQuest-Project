@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Quest</title>
+    <link rel="stylesheet" href="./guess.css" />
+    <link rel="icon" href="./guess logo.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <audio src="./bg.mp3" controls autoplay hidden></audio>
+    <a  href=".."><button class="btn-class-name">
+      <span class="back"></span>
+      <span class="front"><i style="font-size: 25px; color: black;"  class='bx bx-home'></i></span>
+     
+    </button></a>
+    <nav class="card">
+      <h1>guess number from 1 to 100</h1>
+      <nav class="inpt">
+        <input class="int" type="number" min="1" max="100" />
+        <button onclick="checkgess ()" class="ch"> check &#9863;</button>
+        <button style="display: none" class="cp">next time</button>
+      </nav>
+      <p style="color: aliceblue;"></p>
+      <h6>you have <span class="l">8</span> chances</h6>
+    </nav>
+  </body>
+  <script src="./guess.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

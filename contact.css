@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.shadow__btn {
+  cursor: pointer;
+  position: absolute;
+ top: 85%;
+ right: 5%;
+  z-index: 100;
+  padding: 15px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.shadow__btn {
+  z-index: 100;
+  background: rgb(0,140,255);
+  box-shadow: 0 0 25px rgb(0,140,255);
+}
+
+.shadow__btn:hover {
+  z-index: 100;
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.logo .game {
+    color: rgb(220, 20, 60);
+    font-family: "Black Ops One", system-ui;
+    text-decoration: none;
+}
+
+.logo .quest {
+    color: darkblue;
+    font-family: "Black Ops One", system-ui;
+    text-decoration: none;
+}
+h1 {
+    font-family: "Black Ops One", system-ui;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 10;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 40px;
+}
+#homereturn{
+    position: absolute;
+    z-index: 10;
+    margin-left: 1400px;
+    height: 70px;
+    width: 70px;
+    margin-top: 20px;
+  }
+  .qr{
+    height: 130px;
+
+position: absolute;
+top: 130%;
+left: -117%;
+  }
+  .socials{
+    position: absolute;
+    z-index: 10;
+    margin-top: 100px;
+    margin-left: 40%;
+  }
+  .icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 100px;
+    margin-left: -150px;
+  }
+  .insta{
+height: 100px;
+width: 100px;
+  }
+  .youtube{
+    height: 100px;
+    width: 100px;
+  }
+  .insta:hover{
+    scale: 1.1;
+  }
+  .youtube:hover{
+    scale: 1.1;
+  }
+  .writing{
+    font-family: "Black Ops One", system-ui;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: -150px;
+  }
+  
+
+.btn-class-name {
+  --primary: 255, 90, 120;
+  --secondary: 150, 50, 60;
+  width: 60px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  outline: 10px solid rgb(var(--primary), .5);
+  border-radius: 100%;
+  position: relative;
+  transition: .3s;
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  z-index: 10;
+}
+
+.btn-class-name .back {
+  background: rgb(var(--secondary));
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-class-name .front {
+  z-index: 10;
+  background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+  box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+  border-radius: 100%;
+  position: absolute;
+  border: 1px solid rgb(var(--secondary));
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  transform: translateY(-15%);
+  transition: .15s;
+  color: rgb(var(--secondary));
+}
+
+.btn-class-name:active .front {
+  transform: translateY(0%);
+  box-shadow: 0 0;
+}
+
+ canvas {
+    width: 100%; 
+    height: 100%; 
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+@media (max-width: 768px) { 
+.qr{
+  display: flex;
+
+}
+  .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: -300px;
+}
+}
+

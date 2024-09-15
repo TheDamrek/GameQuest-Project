@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Quest</title>
+    <link rel="icon" href="./Removal-648.png" type="image/x-icon">
+    <link rel="stylesheet" href="hangman.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <a  href="..">
+        <button class="btn-class-name">
+            <span class="back"></span>
+            <span class="front"><i style="font-size: 25px; color: black;"  class='bx bx-home'></i></span>
+           
+          </button></a>
+    <div class="container">
+    <div id="options-container">
+    </div>
+    <div id="letter-container" class="letter-container hide">
+    </div>
+    <div id="user-input-section"></div>
+    <canvas id="canvas" ></canvas>
+    <div id="new-game-container" class="new-game-popup hide">
+        <div id="result-text"></div>
+        <button id="new-game-button">New Game</button>
+    </div>
+    </div>
+
+    <audio id="audio" src="./song.mp3" autoplay loop></audio>
+</body>
+<script src="hangman.js"></script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>report page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="logo">
+        <a href=""><h1><span class="game">Game</span><span class="quest">Quest</span></h1></a>   </div> 
+     <a href=".."> <button class="btn-class-name">
+            <span class="back"></span>
+            <span class="front"><i style="font-size: 25px; color: black;"  class='bx bx-home'></i></span>
+           
+          </button></a>
+    <canvas id="test"></canvas>
+
+    <div class="container">
+        <h1>Report bugs</h1>
+        <form id="contact-form">
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Describe the bugs:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

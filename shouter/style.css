@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  background-image: url("./bg.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.game_infos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container {
+    height: 400px;
+    width: 500px;
+    border: 1px solid #999;
+    cursor: crosshair;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#target {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    transition: 0.25s;
+    animation: animateTarget 10s;
+}
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border: 5px black dashed;
+    background-color: #3C7103;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button.restart_btn {
+    background-color: #E34234;
+}
+
+@keyframes animateTarget {
+    to {
+        transform: translateY(-200px) rotate(90deg);
+    }
+  }
+
+  .btn-class-name {
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 60px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: 10px solid rgb(177,156,33);
+    border-radius: 100%;
+    position: relative;
+    transition: .3s;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+  }
+  
+  .btn-class-name .back {
+    background-color: rgb(177,156,33);
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-class-name .front {
+    background-color:  rgb(177,156,33);
+    box-shadow: 0 .5em 1em -0.2em black;
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid rgb(177,156,33);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: .15s;
+    color: rgb(var(--secondary));
+  }
+  
+  .btn-class-name:active .front {
+    transform: translateY(0%);
+    box-shadow: 0 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
