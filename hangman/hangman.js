@@ -562,4 +562,6 @@ const blocker = () => {
 
   let myAudio = document.querySelector("#audio")
   myAudio.play()
+
+  window.onload = myAudio.play()
   
