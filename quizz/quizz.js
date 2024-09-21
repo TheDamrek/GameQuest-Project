@@ -3,6 +3,8 @@
  let myAudio = document.querySelector('#audio')
 myAudio.play()
 
+window.onload = myAudio.play()
+
  const questions = [
     {
         question: "Which comics character is known for being captain america's friend ?",
