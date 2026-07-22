@@ -18,6 +18,7 @@ function checkgess() {
             icon: "success"
           });
           musicSound.play('/success.mp3');
+          setTimeout(resetGame, 2000)
           
      } else if (rNumber > userguess) {
         console.log("Your guess is too low!");
@@ -38,13 +39,24 @@ function checkgess() {
         document.querySelector(".ch").textContent = "HAHA";
         document.querySelector(".ch").disabled = true;
         setTimeout(function() {
-            location.reload(); 
-        }, 5000);
+            resetGame(); 
+        }, 1000);
     }
 }
-function Areplay() {
-    if( chances === 0 && rNumber ){
-        document.querySelector(".cp").style.display = flex;
-       
-    }
+
+
+function resetGame() {
+    chances = 8;
+    rNumber = Math.floor(Math.random()*100) + 1;
+    console.log(rNumber)
+
+    document.querySelector("span").textContent = chances;
+    document.querySelector(".l").textContent = chances;
+    document.querySelector("p").textContent = "";
+    document.querySelector('.int').textContent = "";
+    document.querySelector(".int").value = "";
+
+    const check = document.querySelector(".ch")
+    check.textContent = "Vérifiez"
+    check.disabled = false
 }
