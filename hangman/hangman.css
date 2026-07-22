@@ -105,6 +105,11 @@ body{
     border: 3px solid #000000;
     color: #fff;
 }
+
+#options-container button:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
 #options-container button:hover{
     background-color: rgb(154, 58, 58);
     border: 3px solid #000000;
@@ -124,6 +129,13 @@ border-radius: 0.3em;
 background-color: white;
 cursor: pointer;
 }
+
+#letter-container button:disabled {
+pointer-events: none;
+cursor: not-allowed;
+opacity: 0;
+}
+
 #letter-container button:hover{
     background-color: rgb(154, 58, 58);
     color: #fff;
