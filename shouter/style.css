@@ -10,9 +10,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
 }
 
 .game_infos {
@@ -23,7 +25,8 @@ body {
 
 .container {
     height: 400px;
-    width: 500px;
+    width: 80vw;
+    max-width: 500px;
     border: 1px solid #999;
     cursor: crosshair;
     position: relative;
@@ -78,11 +81,11 @@ button.restart_btn {
     touch-action: manipulation;
     outline: 10px solid rgb(177,156,33);
     border-radius: 100%;
-    position: relative;
     transition: .3s;
     position: absolute;
     top: 40px;
     left: 50px;
+    z-index: 10;
   }
   
   .btn-class-name .back {
@@ -120,6 +123,16 @@ button.restart_btn {
     transform: translateY(0%);
     box-shadow: 0 0;
   }
+
+
+@media (max-width: 600px){
+.btn-class-name{
+    top: 20px;
+    left: auto;
+    right: 20px;
+
+}
+}
 
 
 
