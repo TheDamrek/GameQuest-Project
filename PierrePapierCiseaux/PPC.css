@@ -130,6 +130,12 @@ html, body {
             &:hover {
                 transform: scale(1.1);
             }
+
+
+            img {
+                max-height: 10vh;
+                max-width: 10vh;
+            }
     }
 }
 
