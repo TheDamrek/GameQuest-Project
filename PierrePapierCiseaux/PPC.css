@@ -9,6 +9,7 @@ html, body {
     height: 100%;
     color: white;
     font-family: 'Arial', sans-serif;
+    overflow: hidden;
 }
 
 #gameCanvas {
@@ -24,9 +25,9 @@ html, body {
 .container3 {
     position: absolute;
     z-index: 2;
-    transform: translateX(-50%, -50%);
-    left: 10%;
-    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 20%;
+    top: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +37,7 @@ html, body {
         img{
             height: 20vh;
             width: 20vh;
-
+            object-fit: contain;
         }
     }
 }
@@ -44,9 +45,9 @@ html, body {
 .container4 {
     position: absolute;
     z-index: 2;
-    transform: translateX(-50%, -50%);
-    left: 75%;
-    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 80%;
+    top: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +57,7 @@ html, body {
         img{
             height: 20vh;
             width: 20vh;
+            object-fit: contain;
 
         }
     }
@@ -65,11 +67,11 @@ html, body {
     width: 100%;
     position: absolute;
     z-index: 2;
-    top: 10%;
+    top: 5vh;
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding: 0 10%;
+    padding: 0 10vh;
     flex-direction: row;
 
     .Computerscore{
@@ -100,44 +102,192 @@ html, body {
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.container3 {
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    left: 20%;
+    top: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .ImageSpace{
+        img{
+            height: 20vh;
+            width: 20vh;
+            object-fit: contain;
+        }
+    }
+}
+
+.container4 {
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    left: 80%;
+    top: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .ImageSpace{
+        img{
+            height: 20vh;
+            width: 20vh;
+            object-fit: contain;
+        }
+    }
+}
+
+.container1 {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    flex-direction: row;
+
+    .Computerscore{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            font-weight: bold;
+            color: white;
+        }
+    }
+
+    .Playerscore{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            font-weight: bold;
+            color: white;
+        }
+    }
+}
+
 .container2 {
     width: 100%;
     position: absolute;
     z-index: 2;
-    bottom: 10%;
+    bottom: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
-    gap : 7vh;
+    padding: 0 5%;
+    gap: 2vh;
     flex-direction: column;
+
+    .title h1 {
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+    }
 
     .choices {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10vh;
+        gap: clamp(15px, 4vw, 40px);
         flex-direction: row;
+        width: 100%;
 
         button{
             background-color: blue;
-            border: solid 2px rgb(1, 1, 151);
+            border: solid 3px rgb(1, 1, 151);
             cursor: pointer;
             border-radius: 20%;
             transition: all 0.3s ease-in-out;
-            padding: 10% 20%;
+            padding: clamp(15px, 3vmin, 30px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: clamp(100px, 22vmin, 180px);
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.08);
             }
 
+            h2 {
+                font-size: clamp(0.9rem, 2vw, 1.4rem);
+                color: white;
+            }
 
             img {
-                max-height: 10vh;
-                max-width: 10vh;
+                height: 13vmin;
+                width: 13vmin;
+                max-height: 100px;
+                max-width: 100px;
+                object-fit: contain;
             }
+        }
     }
 }
 
+@media (max-width: 600px) {
+    .container3 {
+        left: 50%;
+        top: 26%;
+    }
 
+    .container4 {
+        left: 50%;
+        top: 50%;
+    }
+
+    .container2 {
+        bottom: 2vh;
+        
+        .choices {
+            gap: 12px;
+            
+            button {
+                padding: 12px;
+                min-width: 95px;
+                
+                img {
+                    height: 12vmin;
+                    width: 12vmin;
+                }
+            }
+        }
+    }
 }
