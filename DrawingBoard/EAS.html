@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="EAS.css">
+</head>
+<body>
+
+        <button id="clearButton">Clear current grid</button>
+
+
+
+    <div class="SquaresContainer"></div>
+
+    <button id="InformationButton"><img src="/DrawingBoard/ExclamationMark.png" alt=""></button>
+
+    <div class="InformationContainer">
+        <div class="InformationContent">
+            <p>You are obliged to use a 16*16 grid on your first try.</p>
+            <p>After that, you can choose the size of the grid you want to use.</p>
+            <button id="closeButton">Close</button>
+        </div>
+
+    </div>
+
+    <div class="SelectionRadioButtons">
+        <input type="color" name="ColorPicker" id="ColorPicker" ">
+        <label class = "label" for="ColorPicker">Pick a color</label>
+
+        <input type="radio" name="Mode" id="RainbowMode">
+        <label class = "label"  for="RainbowMode">Rainbow Mode</label>
+
+        <input type="radio" name="Mode" id="EraserMode">
+        <label class = "label" for="EraserMode">Eraser Mode</label>
+
+        <input type="radio" name="Mode" id="DarkMode">
+        <label for="DarkMode">Dark Mode</label>
+    </div>
+
+     <canvas id="test"></canvas>
+
+
+    <script src="EAS.js"></script>
+</body>
+</html>
